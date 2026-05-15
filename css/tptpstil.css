@@ -479,3 +479,45 @@ footer {
         font-size: 24px;
     }
 }
+
+/* Brzi skok navigacija za sadrzaj.html */
+
+nav[aria-label="Brzi skok"] {
+    background-color: var(--primarna-boja);
+    padding: 12px;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-top: 15px;
+}
+
+nav[aria-label="Brzi skok"] p {
+    color: white;
+}
+
+nav[aria-label="Brzi skok"] a {
+    color: var(--akcent-boja);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+nav[aria-label="Brzi skok"] a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* Mapa Europe */
+
+#mapa img {
+    width: 100%;
+    max-width: 700px;
+
+    display: block;
+
+    margin: 20px auto;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--sjena);
+}
