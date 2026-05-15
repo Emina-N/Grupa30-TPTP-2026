@@ -1,0 +1,481 @@
+/* css varijable */
+:root {
+
+    /* Boje */
+    --primarna-boja: #1e3a5f;
+    --sekundarna-boja: #f4f4f4;
+    --akcent-boja: #ff9800;
+    --tekst-boja: #222;
+    --bijela: #ffffff;
+
+    /* Font */
+    --font-glavni: Arial, sans-serif;
+
+    /* Razmaci */
+    --razmak-mali: 10px;
+    --razmak-srednji: 20px;
+    --razmak-veliki: 40px;
+
+    --radius: 12px;
+    --sjena: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* Reset margin/padding za sve elemente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stilovi za cijelu stranicu */
+body {
+    font-family: var(--font-glavni);
+    background-color: var(--sekundarna-boja);
+    color: var(--tekst-boja);
+    line-height: 1.6;
+
+    /* Animacija ucitavanja stranice */
+    animation: fadeIn 1s ease;
+}
+
+
+/* Header */
+
+header {
+    background-color: var(--primarna-boja);
+    color: var(--bijela);
+
+    text-align: center;
+    padding: var(--razmak-srednji);
+}
+
+/* Logo slika */
+header img {
+    border-radius: 50%;
+    margin-bottom: var(--razmak-mali);
+}
+
+
+/* Navigacija-flexbox */
+
+nav ul {
+
+    /* Flexbox raspored */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--razmak-srednji);
+
+    list-style: none;
+
+    /* Omogućava prelamanje na manjim ekranima */
+    flex-wrap: wrap;
+
+    margin-top: var(--razmak-mali);
+}
+
+/* Linkovi navigacije */
+nav a {
+    color: var(--bijela);
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 10px 16px;
+    border-radius: var(--radius);
+
+    /* Tranzicija hover efekta */
+    transition: 0.3s;
+}
+
+/* Hover */
+nav a:hover {
+    background-color: var(--akcent-boja);
+    transform: translateY(-3px);
+}
+
+/* Focus */
+nav a:focus {
+    outline: 2px solid yellow;
+}
+
+
+/* Filter dugmad */
+
+.filter-btn {
+    background-color: var(--primarna-boja);
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+    margin: 8px;
+
+    border-radius: var(--radius);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover efekat dugmeta */
+.filter-btn:hover {
+    background-color: var(--akcent-boja);
+    transform: scale(1.05);
+}
+
+
+/* Main sadrzaj */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: var(--razmak-srednji);
+}
+
+
+/* Sekcije/article/aside */
+
+section, article, aside {
+
+    background-color: var(--bijela);
+
+    padding: var(--razmak-srednji);
+    margin-bottom: var(--razmak-veliki);
+
+    border-radius: var(--radius);
+    box-shadow: var(--sjena);
+}
+
+
+/* Kartice */
+
+#kartice-kontejner {
+
+    /* Grid layout */
+    display: grid;
+
+    /* 3 kolone na desktopu */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: var(--razmak-srednji);
+}
+
+/* Stil jedne kartice */
+.kartica {
+
+    background-color: white;
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--sjena);
+
+    transition: 0.4s;
+
+    position: relative;
+}
+
+
+
+/* Oznaka iznad kartice */
+.kartica::before {
+
+    content: "Biografija";
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    background-color: var(--akcent-boja);
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+
+/* Hover efekat kartice */
+.kartica:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Slika kartice */
+.kartica img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+/* Naslov kartice */
+.kartica h3 {
+    margin: 15px;
+}
+
+/* Tekst kartice */
+.kartica p {
+    margin: 0 15px 15px;
+}
+
+/* Dugme/link kartice */
+.kartica a {
+
+    display: inline-block;
+
+    margin: 0 15px 20px;
+
+    padding: 10px 15px;
+
+    background-color: var(--primarna-boja);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+/* Hover efekat linka */
+.kartica a:hover {
+    background-color: var(--akcent-boja);
+}
+
+
+/* Galerija grid */
+
+.galerija-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+/* Slike galerije */
+.galerija-grid img {
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius);
+
+    transition: 0.4s;
+}
+
+/* Hover efekat galerije */
+.galerija-grid img:hover {
+    transform: scale(1.04);
+}
+
+
+/* Tabela */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+
+th,
+td {
+
+    border: 1px solid #ccc;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+/* Zaglavlje tabele */
+th {
+    background-color: var(--primarna-boja);
+
+    color: white;
+}
+
+/* nth-child pseudo-klasa */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover redova */
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+
+/* Forma */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+/* Input elementi */
+input, textarea, select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+/* Focus efekat forme */
+input:focus, textarea:focus, select:focus {
+
+    border-color: var(--akcent-boja);
+
+    outline: none;
+
+    box-shadow: 0 0 5px var(--akcent-boja);
+}
+
+/* Dugme forme */
+button {
+
+    background-color: var(--primarna-boja);
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover dugmeta */
+button:hover {
+    background-color: var(--akcent-boja);
+
+    transform: scale(1.05);
+}
+
+
+/* Aside */
+
+aside {
+    border-left: 5px solid var(--akcent-boja);
+}
+
+
+/* Footer */
+
+footer {
+
+    background-color: var(--primarna-boja);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* Animacija */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Media query - tablet */
+
+@media (max-width: 900px) {
+
+    /* 2 kolone na tabletima */
+    #kartice-kontejner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Galerija 2 kolone */
+    .galerija-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Navigacija vertikalno */
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+
+/* Media query - mobilni */
+
+@media (max-width: 600px) {
+
+    /* Jedna kolona na mobilnom */
+    #kartice-kontejner {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galerija jedna kolona */
+    .galerija-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Responsivni iframe */
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Manji font */
+    body {
+        font-size: 15px;
+    }
+
+    /* Manji naslov */
+    header h1 {
+        font-size: 24px;
+    }
+}
