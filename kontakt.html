@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Biografije</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kontaktirajte nas</h1>
+        <nav aria-label="Glavna navigacija">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="sadrzaj.html">Sadržaj</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Želimo vaše mišljenje</h2>
+            <p>Pišite nam ukoliko imate prijedloge za nove biografije.</p>
+        </article>
+
+        <aside>
+            <h3>FAQ</h3>
+            <p>Odgovaramo na upite u roku od 24h.</p>
+        </aside>
+
+        <section>
+            <h2>Kontakt forma</h2>
+            <div id="poruka-uspjeha" style="display: none;"></div>
+            <form id="kontakt-forma">
+                <div>
+                    <label for="ime">Ime:</label><br>
+                    <input type="text" id="ime" name="ime">
+                    <span id="greska-ime" class="greska" style="color: red;"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="prezime">Prezime:</label><br>
+                    <input type="text" id="prezime" name="prezime">
+                    <span id="greska-prezime" class="greska" style="color: red;"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail:</label><br>
+                    <input type="text" id="email" name="email">
+                    <span id="greska-email" class="greska" style="color: red;"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="telefon">Telefon:</label><br>
+                    <input type="text" id="telefon" name="telefon">
+                    <span id="greska-telefon" class="greska" style="color: red;"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="tema">Tema:</label><br>
+                    <select id="tema" name="tema">
+                        <option value="">-- Odaberite --</option>
+                        <option value="prijedlog">Prijedlog</option>
+                        <option value="ispravka">Ispravka</option>
+                    </select>
+                    <span id="greska-tema" class="greska" style="color: red;"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="poruka">Poruka:</label><br>
+                    <textarea id="poruka" name="poruka" rows="5"></textarea>
+                    <span id="greska-poruka" class="greska" style="color: red;"></span>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" id="submit-dugme">Pošalji</button>
+                    <button type="reset" id="reset-dugme">Poništi</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Autori: Anto Marković,Emina Nuhanović, Emir Lješnica | 2026.</p>
+    </footer>
+
+    <script src="js/tptpskripte.js"></script>
+</body>
+</html>
