@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detaljni Sadržaj - Biografije</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+</head>
+<body id="vrh">
+
+    <header>
+        <h1>Detalji i Analize</h1>
+        <nav aria-label="Glavna navigacija">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="sadrzaj.html">Sadržaj</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav aria-label="Brzi skok">
+        <p>Skoči na: 
+            <a href="#tabela">Tabela</a> | <a href="#kategorije">Kategorije</a> | <a href="#galerija">Galerija</a> | <a href="#mapa">Mapa</a>
+        </p>
+    </nav>
+
+    <main>
+        <article>
+            <h2>O našoj metodologiji</h2>
+            <p>Podaci su prikupljeni iz provjerenih istorijskih arhiva i enciklopedija.</p>
+        </article>
+
+        <aside>
+            <h3>Zanimljivost</h3>
+            <p>Leonardo Da Vinci je pisao s desna na lijevo, u "ogledalo" stilu.</p>
+        </aside>
+
+        <section id="tabela">
+            <h2>Uporedni pregled</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Ime i prezime</th>
+                        <th>Oblast</th>
+                        <th>Godina rođenja</th>
+                        <th>Dostignuće</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nikola Tesla</td><td>Elektrotehnika</td><td>1856</td><td>Naizmjenična struja</td></tr>
+                    <tr><td>Marie Curie</td><td>Hemija</td><td>1867</td><td>Radioaktivnost</td></tr>
+                    <tr><td>Leonardo Da Vinci</td><td>Umjetnost</td><td>1452</td><td>Mona Lisa</td></tr>
+                    <tr><td>William Shakespeare</td><td>Književnost</td><td>1564</td><td>Hamlet</td></tr>
+                    <tr><td>Albert Einstein</td><td>Fizika</td><td>1879</td><td>Relativnost</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="kategorije">
+            <h2>Kategorije</h2>
+            <ul>
+                <li><strong>Nauka</strong>
+                    <ul>
+                        <li>Fizika: Einstein, Curie</li>
+                        <li>Elektrika: Tesla</li>
+                    </ul>
+                </li>
+                <li><strong>Umjetnost</strong>
+                    <ul>
+                        <li>Slikarstvo: Da Vinci</li>
+                        <li>Pisanje: Shakespeare</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="galerija">
+            <h2>Galerija</h2>
+            <div class="galerija-grid">
+                <img src="slike/gal1.jpg" alt="Tesla slika 1">
+                <img src="slike/gal2.jpg" alt="Curie slika 2">
+                <img src="slike/gal3.jpg" alt="Da Vinci slika 3">
+                <img src="slike/gal4.jpg" alt="Shakespeare slika 4">
+                <img src="slike/gal5.jpg" alt="Einstein slika 5">
+                <img src="slike/gal6.jpg" alt="Kleopatra slika 6">
+            </div>
+        </section>
+
+        <section id="mapa">
+            <h2>Interaktivna mapa</h2>
+            <img src="slike/mapa-evrope.jpg" alt="Karta Evrope" usemap="#lokacije">
+            <map name="lokacije">
+                <area shape="rect" coords="200,100,300,150" href="curie.html" alt="Poljska">
+                <area shape="circle" coords="350,250,30" href="tesla.html" alt="Smiljan">
+            </map>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#vrh">Skoči na vrh</a>
+        <p>Autori: Anto Marković, Emina Nuhanović, Emir Lješnica | 2026.</p>
+    </footer>
+
+    <script src="js/tptpskripte.js"></script>
+</body>
+</html>
