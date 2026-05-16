@@ -521,3 +521,85 @@ nav[aria-label="Brzi skok"] a:hover {
 
     box-shadow: var(--sjena);
 }
+
+
+
+/* Stilovi za Tamni Mod - redefinisanje CSS varijabli kada body dobije klasu .dark-theme */
+body.dark-theme {
+    --primarna-boja: #0f172a;       /* Tamna pozadina headera/footera */
+    --sekundarna-boja: #1e293b;     /* Tamna pozadina cijele stranice */
+    --bijela: #334155;              /* Tamno sive sekcije i kartice */
+    --tekst-boja: #f8fafc;          /* Bijeli tekst */
+    --sjena: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Prilagođavanje input polja u tamnom modu da tekst bude vidljiv */
+body.dark-theme input, 
+body.dark-theme textarea, 
+body.dark-theme select {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #475569;
+}
+
+/* Klasa koju JS dodaje na input polje ako je unos pogrešan */
+.input-greska {
+    border: 2px solid red !important;
+    background-color: #ffe6e6;
+}
+body.dark-theme .input-greska {
+    background-color: #5c2b2b;
+}
+
+body.dark-theme table {
+    border-color: #475569; 
+    background-color: var(--bijela); 
+    color: var(--tekst-boja); 
+}
+
+body.dark-theme th {
+    background-color: #0f172a !important; 
+    color: #ffffff !important; 
+}
+
+body.dark-theme td {
+    color: var(--tekst-boja) !important; 
+}
+
+body.dark-theme tr:nth-child(even) {
+    background-color: #1e293b !important; 
+}
+body.dark-theme tr:nth-child(odd) {
+    background-color: #334155 !important; 
+}
+
+body.dark-theme table a {
+    color: #38bdf8 !important; 
+}
+
+/* Bojimo cijeli okvir u tamnoplavu boju sa zaobljenim uglovima */
+nav[aria-label="Filter kategorija"] {
+    background-color: var(--primarna-boja); /* Koristi vašu tamnoplavu boju */
+    padding: 12px;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-top: 15px;
+    color: #ffffff; /* Prisiljava tekst i crtice da uvijek budu bijeli */
+}
+
+nav[aria-label="Filter kategorija"] .filter-btn {
+    background: none;         /* Briše sivu pozadinu dugmeta */
+    border: none;             /* Briše okvir oko dugmeta */
+    color: #ffffff;           /* Slova postaju bijela */
+    font-family: var(--font-glavni);
+    font-size: 16px;
+    cursor: pointer;          /* Kada miš pređe preko, pretvori se u ruku za klik */
+    padding: 0 5px;
+    display: inline;          /* Prisiljava ih da stoje u istom redu sa tekstom */
+    transition: color 0.3s ease;
+}
+
+/* Šta se desi kada korisnik pređe mišem preko kategorije */
+nav[aria-label="Filter kategorija"] .filter-btn:hover {
+    color: var(--akcent-boja); /* Mijenja boju u vašu narandžastu boju na hover */
+}

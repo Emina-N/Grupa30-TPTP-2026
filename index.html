@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Početna - Biografije</title>
     <link rel="stylesheet" href="css/tptpstil.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
              width="150">
     </picture>
         <h1>Enciklopedija Poznatih Ličnosti</h1>
-        
+        <button id="dark-mode-toggle" class="filter-btn">🌙 Tamni mod</button>
         <nav aria-label="Glavna navigacija">
             <ul>
                 <li><a href="https://github.com/Emina-N/Grupa30-TPTP-2026" target="_blank" rel="noopener">GitHub Repozitorij</a></li>
@@ -29,22 +30,22 @@
     </header>
 
     <nav aria-label="Filter kategorija">
-        <p>Filtriraj po kategoriji:</p>
-        <button class="filter-btn" data-filter="sve">Sve ličnosti</button>
-        <button class="filter-btn" data-filter="naucnici">Naučnici</button>
-        <button class="filter-btn" data-filter="umjetnici">Umjetnici</button>
-        <button class="filter-btn" data-filter="vladari">Istorijski vladari</button>
-        <button class="filter-btn" data-filter="pisci">Pisci</button>
-    </nav>
+    <p>Filtriraj po kategoriji: 
+        <button class="filter-btn" data-filter="sve">Sve ličnosti</button> | 
+        <button class="filter-btn" data-filter="naucnici">Naučnici</button> | 
+        <button class="filter-btn" data-filter="pisci">Pisci</button> | 
+        <button class="filter-btn" data-filter="vladari">Vladari</button>
+    </p>
+</nav>
 
     <main>
         <article>
             <h2>Dobrodošli u našu arhivu</h2>
             <p>Istražite živote i djela ljudi koji su ostavili neizbrisiv trag u ljudskoj historiji kroz nauku, umjetnost i politiku.</p>
         </article>
-
+<h2>Izdvojene biografije</h2>
         <section id="kartice-kontejner">
-            <h2>Izdvojene biografije</h2>
+            
             <article class="kartica" data-kategorija="naucnici">
                 <img src="images/tesla.jpg" alt="Portret Nikole Tesle">
                 <h3>Nikola Tesla</h3>
@@ -85,13 +86,14 @@
 
         <aside>
             <h2>Video dana</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Ok8JDXSYw1U" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J61NaBfQ6Zs?si=14uaAwsqHeolwRtK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <p>Kratki dokumentarac o Nikoli Tesli.</p>
         </aside>
     </main>
 
     <footer>
         <p>Autori projekta: Anto Marković, Emina Nuhanović, Emir Lješnica | 2026.</p>
+        <p>Vrijeme provedeno na ovoj stranici: <span id="sesija-timer">0</span> sekundi.</p>
     </footer>
 
     <script src="js/tptpskripte.js"></script>

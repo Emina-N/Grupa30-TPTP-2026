@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detaljni Sadržaj - Biografije</title>
     <link rel="stylesheet" href="css/tptpstil.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body id="vrh">
 
     <header>
         <h1>Detalji i Analize</h1>
+        <button id="dark-mode-toggle" class="filter-btn">🌙 Tamni mod</button>
         <nav aria-label="Glavna navigacija">
             <ul>
                 <li><a href="index.html">Početna</a></li>
@@ -63,7 +65,7 @@
                 <li><strong>Nauka</strong>
                     <ul>
                         <li>Fizika: Einstein, Curie</li>
-                        <li>Elektrika: Tesla</li>
+                        <li>Elektrotehnika: Tesla</li>
                     </ul>
                 </li>
                 <li><strong>Umjetnost</strong>
@@ -100,6 +102,7 @@
     <footer>
         <a href="#vrh">Skoči na vrh</a>
         <p>Autori: Anto Marković, Emina Nuhanović, Emir Lješnica | 2026.</p>
+        <p>Vrijeme provedeno na ovoj stranici: <span id="sesija-timer">0</span> sekundi.</p>
     </footer>
 
     <script src="js/tptpskripte.js"></script>
