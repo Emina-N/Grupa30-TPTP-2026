@@ -1,0 +1,15 @@
+{
+  "name": "Enciklopedija Poznatih Ličnosti",
+  "short_name": "Biografije",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f4f4",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "images/logo.jpg",
+      "sizes": "150x150",
+      "type": "image/jpeg"
+    }
+  ]
+}
