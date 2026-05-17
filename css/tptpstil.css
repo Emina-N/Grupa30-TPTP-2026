@@ -748,3 +748,28 @@ nav[aria-label="Filter kategorija"] .filter-btn:hover {
         border: 1px solid #475569;
     }
 }
+
+hr {
+    border: 0;                  /* Briše ružne fabričke okvire preglednika */
+    height: 1px;                /* Određuje debljinu linije (1px je idealno za elegantan izgled) */
+    background-color: #ccc;     /* Boja linije (možeš staviti i npr. var(--primarna-boja)) */
+    margin: 20px 0;             /* Pravi razmak od 20px iznad i ispod linije da tekst ne bude zalijepljen */
+    width: 100%;                /* Osigurava da se linija automatski rasteže i skuplja zavisno od ekrana */
+    max-width: 100%;            /* Sprečava da linija ikada "pobjegne" van ekrana na mobitelu */
+}
+
+body.dark-theme .kartica {
+    background-color: var(--bijela) !important;   /* Prisiljava karticu da primi tamno sivu pozadinu (#334155) */
+    color: var(--tekst-boja) !important;         /* Osigurava da tekst unutar kartice bude čitljiv i bijel */
+    border: 1px solid #475569;                   /* Dodaje blagi tamni okvir oko kartice da se bolje ističe */
+}
+
+/* Popravak za opise (paragrafe) unutar kartica ako su imali fiksnu boju */
+body.dark-theme .kartica p {
+    color: #cbd5e1 !important;                   /* Blago sivkasta boja za opise, odlična za oči u mraku */
+}
+
+/* Popravak za dugme/link "Saznaj više" unutar kartica */
+body.dark-theme .kartica a {
+    color: #38bdf8 !important;                   /* Svijetloplava boja za linkove kako bi se savršeno vidjeli */
+}
