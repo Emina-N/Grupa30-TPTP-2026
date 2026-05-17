@@ -602,3 +602,126 @@ nav[aria-label="Filter kategorija"] .filter-btn {
 nav[aria-label="Filter kategorija"] .filter-btn:hover {
     color: var(--akcent-boja); /* Mijenja boju u vašu narandžastu boju na hover */
 }
+
+/* Animirani SVG logo */
+
+/* Kontejner SVG-a */
+.svg-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+
+/* Veličina SVG-a */
+.orbit-svg {
+
+    width: 180px;
+
+    height: 180px;
+}
+
+
+/* Orbite */
+
+.orbita {
+
+    fill: none;
+
+    stroke: var(--akcent-boja);
+
+    stroke-width: 4;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 12 10;
+
+    transform-origin: center;
+}
+
+
+/* Vanjska orbita */
+.orbita-1 {
+
+    animation: rotacija-desno 12s linear infinite;
+}
+
+
+/* Unutrasnja orbita */
+.orbita-2 {
+
+    stroke: var(--bijela);
+
+    animation: rotacija-lijevo 8s linear infinite;
+}
+
+
+/* Centralno jezgro */
+
+.jezgro {
+
+    fill: var(--akcent-boja);
+
+    filter: drop-shadow(0 0 10px var(--akcent-boja));
+
+    animation: pulsiranje 2s ease-in-out infinite;
+}
+
+
+/* Animacije */
+
+/* Rotacija udesno */
+@keyframes rotacija-desno {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Rotacija ulijevo */
+@keyframes rotacija-lijevo {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* Pulsiranje centra */
+@keyframes pulsiranje {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+
+    50% {
+
+        transform: scale(1.25);
+
+        opacity: 0.7;
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
