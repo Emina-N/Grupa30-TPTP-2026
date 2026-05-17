@@ -512,13 +512,12 @@ nav[aria-label="Brzi skok"] a:hover {
 #mapa img {
     width: 100%;
     max-width: 700px;
+    height: auto;
 
     display: block;
-
     margin: 20px auto;
 
     border-radius: var(--radius);
-
     box-shadow: var(--sjena);
 }
 
