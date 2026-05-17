@@ -725,3 +725,26 @@ nav[aria-label="Filter kategorija"] .filter-btn:hover {
         opacity: 1;
     }
 }
+
+/* Automatski tamni mod(prefers-color-scheme) */
+
+@media (prefers-color-scheme: dark) {
+
+    body:not(.light-theme) {
+
+        --primarna-boja: #0f172a;
+        --sekundarna-boja: #1e293b;
+        --bijela: #334155;
+        --tekst-boja: #f8fafc;
+        --sjena: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    body:not(.light-theme) input,
+    body:not(.light-theme) textarea,
+    body:not(.light-theme) select {
+
+        background-color: #1e293b;
+        color: #f8fafc;
+        border: 1px solid #475569;
+    }
+}

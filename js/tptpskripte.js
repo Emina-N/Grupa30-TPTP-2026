@@ -6,33 +6,84 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     
-    // ==========================================
-    // 1. TAMNI / SVJETLI MOD (LocalStorage)
-    // ==========================================
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    
-    // Provjera da li u LocalStorage već postoji spašena tema od ranije
-    const sacuvanaTema = localStorage.getItem("tema");
-    if (sacuvanaTema === "dark") {
-        document.body.classList.add("dark-theme");
-        if (darkModeToggle) darkModeToggle.textContent = "☀️ Svijetla tema";
-    }
+// 1. Tamni / svjetli mod
+
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+// Učitavanje spasene teme
+const sacuvanaTema = localStorage.getItem("tema");
+
+// Ako je korisnik ranije rucno odabrao dark
+if (sacuvanaTema === "dark") {
+
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
 
     if (darkModeToggle) {
-        darkModeToggle.addEventListener("click", function () {
-            // Prebacivanje (toggle) klase na body elementu
-            document.body.classList.toggle("dark-theme");
-            
-            // Provjera trenutnog stanja i spašavanje u LocalStorage
-            if (document.body.classList.contains("dark-theme")) {
-                localStorage.setItem("tema", "dark");
-                darkModeToggle.textContent = "☀️ Svijetla tema";
-            } else {
-                localStorage.setItem("tema", "light");
-                darkModeToggle.textContent = "🌙 Tamni mod";
-            }
-        });
+        darkModeToggle.textContent = "☀️ Svijetla tema";
     }
+}
+
+// Ako je korisnik rucno odabrao light
+else if (sacuvanaTema === "light") {
+
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+
+    if (darkModeToggle) {
+        darkModeToggle.textContent = "🌙 Tamni mod";
+    }
+}
+
+// Ako nema spremljene teme koristi sistemsku
+else {
+
+    const sistemskiDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (sistemskiDarkMode) {
+
+        document.body.classList.add("dark-theme");
+
+        if (darkModeToggle) {
+            darkModeToggle.textContent = "☀️ Svijetla tema";
+        }
+
+    } else {
+
+        document.body.classList.remove("dark-theme");
+
+        if (darkModeToggle) {
+            darkModeToggle.textContent = "🌙 Tamni mod";
+        }
+    }
+}
+
+// Klik na toggle dugme
+if (darkModeToggle) {
+
+    darkModeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-theme");
+
+        // Ako je sada dark
+        if (document.body.classList.contains("dark-theme")) {
+
+            document.body.classList.remove("light-theme");
+
+            localStorage.setItem("tema", "dark");
+
+            darkModeToggle.textContent = "☀️ Svijetla tema";
+
+        } else {
+
+            document.body.classList.add("light-theme");
+
+            localStorage.setItem("tema", "light");
+
+            darkModeToggle.textContent = "🌙 Tamni mod";
+        }
+    });
+}
 
     // ==========================================
     // 2. DINAMIČKO FILTRIRANJE KARTICA (index.html)
